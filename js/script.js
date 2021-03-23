@@ -117,12 +117,43 @@ const icons = [
     category: "animal"
   },
 ];
-var html = `<div>
-<i class= "${icons.family} ${icons.prefix}${icons.name}"></i>
-<div class="title">${icons.name}</div>
-</div>`;
+var colors = [
+  "green",
+  "red",
+  "blue"
+];
 
 for (var i = 0; i < icons.length; i++) {
+
+  var html = `<div>
+  <i class= "${icons[i].family} ${icons[i].prefix}${icons[i].name}"></i>
+  <div class="title">${icons[i].name}</div>
+  </div>`;
+
   $(".icons").append(html);
 
+
 }
+var foodCategory = [];
+var bevCategory = [];
+var animalCategory = [];
+
+for (var i = 0; i < icons.length; i++) {
+  if (icons[i].category == "food" && foodCategory.includes(icons[i].category) == false) {
+    foodCategory.push(icons[i].category);
+
+  }
+  if (icons[i].category == "beverage" && bevCategory.includes(icons[i].category) == false) {
+    bevCategory.push(icons[i].category);
+
+  }
+  if (icons[i].category == "animal" && animalCategory.includes(icons[i].category) == false) {
+    animalCategory.push(icons[i].category);
+
+  }
+
+
+}
+console.log(foodCategory);
+console.log(bevCategory);
+console.log(animalCategory);
