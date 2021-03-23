@@ -134,26 +134,14 @@ for (var i = 0; i < icons.length; i++) {
 
 
 }
-var foodCategory = [];
-var bevCategory = [];
-var animalCategory = [];
+const categories = [];
 
 for (var i = 0; i < icons.length; i++) {
-  if (icons[i].category == "food" && foodCategory.includes(icons[i].category) == false) {
-    foodCategory.push(icons[i].category);
 
-  }
-  if (icons[i].category == "beverage" && bevCategory.includes(icons[i].category) == false) {
-    bevCategory.push(icons[i].category);
-
-  }
-  if (icons[i].category == "animal" && animalCategory.includes(icons[i].category) == false) {
-    animalCategory.push(icons[i].category);
-
-  }
+if (categories.includes(icons[i].category) == false) {
+  categories.push(icons[i].category);
+}
 
 
 }
-console.log(foodCategory);
-console.log(bevCategory);
-console.log(animalCategory);
+console.log(categories);
